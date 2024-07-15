@@ -1,53 +1,104 @@
+:root {
+    --primary-text-color: rgb(101, 37, 161);
+    --secondary-text-color: rgb(229, 151, 5);
+    --box-shawdow-color: #777;
+    --tertiary-color: darkcyan;
+    --feature-color: green;
+    --img-bg-color: whitesmoke;
+}
 body {
     padding: 0;
-    margin: 0;
+    margin: 5% auto;
     box-sizing: border-box;
+    width: 80%;
+    font-size: 14px;
 }
 .mytitle {
-    box-shadow: 8px 2px #777;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px var(--box-shawdow-color);
     padding: 10px;
-    border-radius: 7px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left: 2px solid var(--feature-color);
+    margin: 20px;
     &::before {
-
+        content: "";
     }
     &::after {
         content: "Student's Bio";
-        color: orange;
+        color: var(--secondary-text-color);
+        margin: 0 auto;
     }
 }
 .myicon {
-    color: blue;
-    border: 1px solid green;
+    color: whitesmoke;
+    /* border: 1px solid green; */
     padding: 10px;
-    border-radius: 58%;
+    border-radius: 50%;
     background-color: green;
 }
 .aboutme {
     position: relative;
-    border-left: 20px solid green;
+    border-left: 2px solid green;
     padding-left: 20px;
     margin: 20px;
+    color: var(--primary-text-color);
     &::before {
 
     }
     &::after {
-        content: "Hi I'm Vicakkhana I study wabdeploper I love coding";
-        color: blueviolet;
+        content: "Hi I'm Vicakkhana I study wabdeploper I love coding and coding. I live in Yangon, I am now learning HTML, CSS, and javaScript. What I know is 'HTML' is like a structure of building, 'CSS' is like coloring and putting furniture and things like that, and 'JavaScript' is like switching on and off the lights etc. This is my first Student's Bio page built with my littel knowledge. Thanks for your support!";
+        color: var(--primary-text-color);
+    }
+    &::first-line {
+        text-transform: uppercase;
+        color: var(--feature-color);
+        font-family: 'Times New Roman', serif;
+        font-weight: 500;
+    }
+    &::first-letter {
+        font-size: 45px;
+        font-weight: 600;
+        color: var(--secondary-text-color);
+        font-family: cursive;
+        float: left;
+        margin-top: -20px;
+        padding-right: 3px;
+        margin-bottom: 20px;
     }
 }
 .mypen {
     position: absolute;
-    color: blue;
+    color: var(--feature-color);
     font-size: 20px;
-    left: 0px;
+    left: -9px;
     top: -8px;
+    display: inline-block;
+    transform: scaleX(-1);
+}
+.img-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--box-shawdow-color);
+    background-color: var(--box-shawdow-color);
+    border-radius: 20px;
+    margin: 20px;
 }
 .myimage {
-    --shape: 50% 0%, 0% 100%, 100% 100,%;
+    --shape: 50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%;
     width: 150px;
     clip-path: polygon(var(--shape));
-    background-color: #7c2c2c;
-    padding: 30px;
+    background-color: #250202;
+    padding: 10px;
     cursor: pointer;
-    margin-left: 25%;
+    transform: scaleX(-1);
+}
+.mycontact {
+    width: 75%;
+    margin: 10px auto;
+    box-shadow: 1px 0px 2px var(--box-shawdow-color);
+    border-radius: 15px 0px 15px 0px;
+    padding: 10px;
 }
